@@ -6,9 +6,9 @@ call pathogen#infect()
 set ttyfast
 set t_Co=256
 colorscheme symfony
-set number       " set ruler
-set tildeop      " Use tilde as an operator
-set list         " display editing chars
+set relativenumber  " set relative ruler
+set tildeop         " Use tilde as an operator
+set list            " display editing chars
 set listchars=eol:↩,tab:‖,trail:∙
 
 set laststatus=2 " Always show the statusline

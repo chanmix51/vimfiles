@@ -9,6 +9,7 @@ let mapleader = ","
 set ttyfast
 set t_Co=256
 colorscheme symfony
+set number          " set line ruler
 set relativenumber  " set relative ruler
 set tildeop         " Use tilde as an operator
 set list            " display editing chars

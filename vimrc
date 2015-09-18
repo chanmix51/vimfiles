@@ -59,7 +59,7 @@ filetype plugin on
 filetype indent on
 
 set encoding=utf-8
-set guifont=Inconsolata\ 12
+set guifont=Hack\ 10
 
 " F12 to display project window
 " ENTER open file and close window

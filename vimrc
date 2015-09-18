@@ -66,6 +66,9 @@ set guifont=Hack\ 10
 let g:proj_flags="gcimst"
 let $PROJECT_PATH='~/Projects/github'
 
+" Mustach templates dir
+let g:pdv_template_dir = $HOME ."/.vim/templates"
+
 " dont display splash screen
 set shortmess+=I
 
@@ -85,5 +88,8 @@ func! EatChar(pat)
     return (c =~ a:pat) ? '' : c
 endfunc
 iabbrev $_ $this-><C-R>=EatChar('\s')<CR>
+
+" PDV mapping
+nnoremap <C-n> :call pdv#DocumentCurrentLine()<CR>
 
 source ~/.vimrc.local

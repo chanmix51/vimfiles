@@ -36,12 +36,16 @@ set expandtab
 set noswapfile   " Use an SCM instead of swap files
 
 " Highlite cursor line
+autocmd BufLeave * set nocursorcolumn
 autocmd insertEnter * set cursorline
 autocmd insertLeave * set nocursorline
-autocmd insertEnter *.yml set cursorcolumn
-autocmd insertLeave *.yml set nocursorcolumn
-autocmd insertEnter *.edit.* set cursorcolumn
-autocmd insertLeave *.edit.* set nocursorcolumn
+autocmd BufRead,BufNewFile *.yml set cursorcolumn
+" set syntax color & cursorcolumn for TWIG templates
+autocmd BufRead,BufNewFile *.twig setfiletype htmljinja
+autocmd BufEnter *.twig set cursorcolumn
+" set syntax color for psql temp SQL files
+autocmd BufRead,BufNewFile *.edit.* setfiletype sqlpostgres
+
 highlight cursorcolumn term=underline cterm=underline ctermbg=0 guibg=#000000
 highlight cursorline term=underline cterm=underline ctermbg=0 guibg=#000000
 
@@ -71,10 +75,6 @@ let g:pdv_template_dir = $HOME ."/.vim/templates"
 
 " dont display splash screen
 set shortmess+=I
-
-" set syntax color for TWIG templates
-au BufRead,BufNewFile *.html.twig setfiletype htmljinja
-au BufRead,BufNewFile *.edit.* setfiletype sqlpostgres
 
 " Use postgresql SQL file when .sql
 let g:sql_type_default="sqlpostgres"

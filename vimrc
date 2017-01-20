@@ -43,6 +43,8 @@ autocmd BufRead,BufNewFile *.yml set cursorcolumn
 " set syntax color & cursorcolumn for TWIG templates
 autocmd BufRead,BufNewFile *.twig setfiletype htmljinja
 autocmd BufEnter *.twig set cursorcolumn
+autocmd BufEnter *.php set colorcolumn=80,120
+autocmd BufLeave * set colorcolumn=
 " set syntax color for psql temp SQL files
 autocmd BufRead,BufNewFile *.edit.* setfiletype sqlpostgres
 
@@ -63,7 +65,7 @@ filetype plugin on
 filetype indent on
 
 set encoding=utf-8
-set guifont=Hack\ 10
+set guifont=Inconsolata\ 12
 
 " F12 to display project window
 " ENTER open file and close window
@@ -92,4 +94,10 @@ iabbrev $_ $this-><C-R>=EatChar('\s')<CR>
 " PDV mapping
 nnoremap <C-n> :call pdv#DocumentCurrentLine()<CR>
 
+" PHP use statements
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+
+
+highlight colorcolumn guibg=#2a1a1a ctermbg=233
 source ~/.vimrc.local

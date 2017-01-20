@@ -18,20 +18,16 @@ syn case ignore
 
 syn keyword sqlSpecial  false null true
 
-syn keyword sqlKeyword	all analyse analyze any array as asc asymmetric
-syn keyword sqlKeyword authorization binary both by case cast check collate
-syn keyword sqlKeyword column concurrently constraint create cross
-syn keyword sqlKeyword current_catalog current_date current_role 
-syn keyword sqlKeyword current_schema current_time current_timestamp current_user default
-syn keyword sqlKeyword deferrable desc do each else end enum except execute extension fetch for
-syn keyword sqlKeyword foreign from function grant group having initially
-syn keyword sqlKeyword inner into is isnull join language leading left
-syn keyword sqlKeyword limit localtime localtimestamp natural notnull offset
-syn keyword sqlKeyword on only order outer over overlaps placing partition
-syn keyword sqlKeyword primary recursive references returning right set
-syn keyword sqlKeyword session_user similar some symmetric table then to 
-syn keyword sqlKeyword using variadic values verbose view when where window
-syn keyword sqlKeyword with trailing trigger unique user
+syn keyword sqlKeyword all analyse analyze any array as asc asymmetric authorization binary both by
+syn keyword sqlKeyword case cast check collate column concurrently conflict constraint create cross
+syn keyword sqlKeyword current_catalog current_date current_role current_schema current_time
+syn keyword sqlKeyword current_timestamp current_user default deferrable desc do each else end enum
+syn keyword sqlKeyword except execute extension fetch for foreign from function grant group having
+syn keyword sqlKeyword initially inner into is isnull join language leading left limit localtime
+syn keyword sqlKeyword localtimestamp natural notnull offset on only order outer over overlaps
+syn keyword sqlKeyword placing partition primary recursive references returning right security set
+syn keyword sqlKeyword session_user similar some symmetric table then to using variadic values
+syn keyword sqlKeyword verbose view when where window with trailing trigger unique user
 
 syn keyword sqlOperator	not and or escape
 syn keyword sqlOperator	in any some every all between exists
@@ -49,6 +45,7 @@ syn keyword sqlType	int4 int8 numeric serial money varying text bytea time
 syn keyword sqlType	timestamp timestamptz interval point line circle lseg
 syn keyword sqlType	box path polygon cidr inet macaddr bit bitvar tsvector uuid
 syn keyword sqlType	xml json anyarray anyelement anyenum anynonarray cstring 
+syn keyword sqlType	uri
 
 syn keyword sqlFunc     abs avg cbrt ceil ceiling degrees div exp floor ln log mod
 syn keyword sqlFunc     pi power radians random round setseed sign sqrt trunc
